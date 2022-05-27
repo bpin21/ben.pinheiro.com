@@ -5,5 +5,5 @@ description: "Because making a full game is too much work"
 permalink: /ideas/
 
 ---
-##[Home](/index.md)
+[Home](/index.md)
 ![Image](/docs/assets/1.png)
