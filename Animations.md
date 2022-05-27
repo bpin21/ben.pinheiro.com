@@ -3,6 +3,8 @@ layout: page
 title: "Aesthetic Animations"
 description: "complexity emerges from the simplest of patterns"
 permalink: /animations/
+theme: jekyll-theme-cayman
+title: Cool Stuff by Ben Pinheiro
 
 ---
 
