@@ -1,9 +1,7 @@
 ---
-layout: page
+layout: default
 title: "Aesthetic Animations"
 description: "complexity emerges from the simplest of patterns"
 permalink: /animations/
-theme: jekyll-theme-cayman
-
 ---
 ![Image](/docs/assets/)
