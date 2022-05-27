@@ -7,4 +7,4 @@ theme: jekyll-theme-cayman
 
 ---
 
-![Image](/docs/assets/1.png | width=100)
+<img src="https://github.com/bpin21/bpin21.github.io/assets/docs/1.png" width="100" height="100">
