@@ -4,5 +4,5 @@ title: "Aesthetic Animations"
 description: "complexity emerges from the simplest of patterns"
 permalink: /animations/
 ---
-[Home](bpin21.github.io)
+[Home](/index.html)
 ![Image](/docs/assets/1.png)
