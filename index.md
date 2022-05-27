@@ -1,7 +1,3 @@
-# Welcome to my website!
-## Ben Pinheiro
-
-
 # [Aesthetic Animations](/animations/)
 # [Coding Challenges]
 # [Interactive Ideas]
