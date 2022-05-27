@@ -3,12 +3,11 @@ title : Cool Stuff by Ben Pinheiro
 description : pinheiro.ben.21@gmail.com
 ---
 
-# [Aesthetic Animations](/animations/)
-# [Coding Challenges]
-# [Interactive Ideas]
-# [My Music]
-# [Pictures of Paintings]
-# [Scientific Simulations]
+# [Aesthetic Animations](/Animations.md/)
+# [Interactive Ideas]()
+# [Scientific Simulations]()
+# [My Music]()
+# [Pictures of Paintings]()
 ## Header 2
 ### Header 3
 
