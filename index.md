@@ -2,7 +2,12 @@
 ## Ben Pinheiro
 
 
-# Header 1
+# [Aesthetic Animations](bpin21.github.io/animations/)
+# [Coding Challenges]
+# [Interactive Ideas]
+# [My Music]
+# [Pictures of Paintings]
+# [Scientific Simulations]
 ## Header 2
 ### Header 3
 
