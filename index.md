@@ -1,3 +1,8 @@
+---
+title : Cool Stuff by Ben Pinheiro
+description : pinheiro.ben.21@gmail.com
+---
+
 # [Aesthetic Animations](/animations/)
 # [Coding Challenges]
 # [Interactive Ideas]
