@@ -6,4 +6,4 @@ permalink: /animations/
 theme: jekyll-theme-cayman
 
 ---
-![Image](/docs/assets/1.png)
+![Image](/docs/assets/)
