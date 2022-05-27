@@ -2,7 +2,7 @@
 ## Ben Pinheiro
 
 
-# [Aesthetic Animations](bpin21.github.io/animations/)
+# [Aesthetic Animations](/animations/)
 # [Coding Challenges]
 # [Interactive Ideas]
 # [My Music]
