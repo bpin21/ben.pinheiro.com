@@ -3,4 +3,5 @@ title: "Aesthetic Animations"
 description: "complexity emerges from the simplest of patterns"
 permalink: /animations/
 ---
-Here we go
+
+![Image](/docs/assets/1.png)
