@@ -1,3 +1,7 @@
+---
 layout: page
-title: "Animations"
+title: "Aesthetic Animations"
+description: "complexity emerges from the simplest of patterns"
 permalink: /animations/
+---
+Here we go
