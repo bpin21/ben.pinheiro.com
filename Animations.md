@@ -7,4 +7,4 @@ theme: jekyll-theme-cayman
 
 ---
 
-![Image](/docs/assets/1.png){: width="500" }
+![Image](/docs/assets/1.png | width=100)
