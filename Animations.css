@@ -5,7 +5,7 @@
                 border: groove black;
 }
 .header {
-  background-image: linear-gradient(to bottom right, navy, green, blue, navy, green, navy, blue, green , navy);
+  background-image: linear-gradient(to bottom right, navy, green, blue, navy, green, navy, blue, green, navy);
                 width: 100vw;
                 height: 15vmin;
                 border: groove black;
@@ -15,15 +15,14 @@
   width: 12vmin;
   height: 12vmin;
   transform: translate(1.5vmin, 1.2vmin);
-  border-radius:22%
+  border-radius:22%;
 }
 .triangle-up {
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 0 5vmin 5vmin 5vmin;
-  border-color: transparent transparent 
-  #363636 transparent;
+  border-color: transparent transparent #363636 transparent;
   border-radius: 25%;
   transform: translate(1vmin, -4vmin);
 }
