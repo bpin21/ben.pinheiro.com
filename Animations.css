@@ -18,38 +18,53 @@
   height: 12vmin;
   transform: translate(1.5vmin, 1.2vmin);
   border-radius: 22%;
+  cursor: pointer;
 }
 
 .triangle-up {
+  position: absolute;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 0 5vmin 5vmin 5vmin;
   border-color: transparent transparent #363636 transparent;
   border-radius: 25%;
-  transform: translate(1vmin, -1.5vmin);
+  transform: translate(1vmin, 1vmin);
 }
 
 .leg-r {
+  position: absolute;
   background-color: #363636;
   width: 2.2vmin;
   height: 5vmin;
-  transform: translate(6.5vmin, -2vmin);
+  transform: translate(6.5vmin, 5.5vmin);
   border-radius: 15%;
 }
 
 .leg-l {
+  position: absolute;
   background-color: #363636;
   width: 2.2vmin;
   height: 5vmin;
-  transform: translate(3.5vmin, -7vmin);
+  transform: translate(3.5vmin, 5.5vmin);
   border-radius: 15%;
 }
 
 .house {
+  position: absolute;
   background-color: #363636;
   width: 3vmin;
   height: 3vmin;
-  transform: translate(4vmin, -12.3vmin);
+  transform: translate(4vmin, 5vmin);
   border-radius: 15%;
+}
+
+.link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
 }
