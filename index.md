@@ -1,6 +1,6 @@
 ---
 title : Cool Stuff by Ben Pinheiro
-description : contact me @ pinheiro.ben.21@gmail.com
+description : contact me - pinheiro.ben.21@gmail.com
 ---
 
 # [Aesthetic Animations](/Animations.html/)
