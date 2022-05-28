@@ -17,12 +17,12 @@ a {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  translateX: 30px;
+  transform: skew(-30deg, 0deg);
 }
 .inner-circle {
   background-color: orange;
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  translateX: 50px;;
+  transform: skew(30deg, 0deg);
 }
