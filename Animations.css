@@ -19,3 +19,13 @@
   transform: translate(1.5vmin, 1.2vmin);
   border-radius: 22%;
 }
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5vmin 5vmin 5vmin;
+  border-color: transparent transparent #363636 transparent;
+  border-radius: 25%;
+  transform: translate(1vmin, -4vmin);
+}
