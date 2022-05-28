@@ -1,24 +1,28 @@
 .background {
-  background-image: linear-gradient(aqua, navy);
+  background-image: linear-gradient(aqua, navy, rgb(48, 17, 99), rgb(161, 15, 15));
   width: 100vw;
-  height: 100vh;
+  height: 300vh;
   border: groove black;
 }
 
 .header {
+  position: sticky;
   background-image: linear-gradient(to bottom right, navy, green, blue, navy, green, navy, blue, green, navy);
   height: 15vmin;
   width: 100vw;
   border: groove black;
+  transform: translateY(-2px);
+  z-index: 5;
 }
 
 .logo {
   background-color: Gainsboro;
-  width: 12vmin;
-  height: 12vmin;
+  width: 11vmin;
+  height: 11vmin;
   transform: translate(1.5vmin, 1.2vmin);
   border-radius: 22%;
   cursor: pointer;
+  border: 1vmin solid #363636;
 }
 
 .triangle-up {
@@ -29,24 +33,24 @@
   border-width: 0 5vmin 5vmin 5vmin;
   border-color: transparent transparent #363636 transparent;
   border-radius: 25%;
-  transform: translate(1vmin, 1vmin);
+  transform: translate(0.5vmin, 1vmin);
 }
 
 .leg-r {
   position: absolute;
   background-color: #363636;
-  width: 2.2vmin;
+  width: 2.5vmin;
   height: 5vmin;
-  transform: translate(6.5vmin, 5.5vmin);
+  transform: translate(5.8vmin, 5.2vmin);
   border-radius: 15%;
 }
 
 .leg-l {
   position: absolute;
   background-color: #363636;
-  width: 2.2vmin;
+  width: 2.5vmin;
   height: 5vmin;
-  transform: translate(3.5vmin, 5.5vmin);
+  transform: translate(2.7vmin, 5.2vmin);
   border-radius: 15%;
 }
 
@@ -55,7 +59,7 @@
   background-color: #363636;
   width: 3vmin;
   height: 3vmin;
-  transform: translate(4vmin, 5vmin);
+  transform: translate(3.5vmin, 5vmin);
   border-radius: 15%;
 }
 
@@ -67,4 +71,49 @@
   left: 0;
   z-index: 1;
 
+}
+
+.grid-h {
+  height: 100%;
+  width: 100%;
+  background-image: repeating-linear-gradient(0deg, #363636 0 15px, transparent 300px 20%);
+  background-size: 50vw;
+  margin: 0;
+  z-index: 0;
+  transform: translateY(-15vmin);
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  transform: translateY(15vmin);
+  z-index: 2;
+
+}
+
+.content > div {
+  flex-grow: 2;
+  width: 50%;
+  max-width: 50%;
+  z-index:3;
+}
+
+.content img {
+  width: 50%;
+  height: auto;
+  z-index:3;
+}
+
+
+.oldcontent {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  transform: translate(20px, -2950px);
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  grid-gap: 100px;
 }
