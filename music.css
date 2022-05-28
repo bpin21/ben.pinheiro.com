@@ -9,4 +9,20 @@ h1 {
 
 a {
  font-size: 30px; 
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.outer-circle {
+  background-color: yellow;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  translateX: 30px;
+}
+.inner-circle {
+  background-color: orange;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  translateX: 50px;;
 }
