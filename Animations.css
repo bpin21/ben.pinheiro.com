@@ -27,5 +27,29 @@
   border-width: 0 5vmin 5vmin 5vmin;
   border-color: transparent transparent #363636 transparent;
   border-radius: 25%;
-  transform: translate(1vmin, -4vmin);
+  transform: translate(1vmin, -1.5vmin);
+}
+
+.leg-r {
+  background-color: #363636;
+  width: 2.2vmin;
+  height: 5vmin;
+  transform: translate(6.5vmin, -2vmin);
+  border-radius: 15%;
+}
+
+.leg-l {
+  background-color: #363636;
+  width: 2.2vmin;
+  height: 5vmin;
+  transform: translate(3.5vmin, -7vmin);
+  border-radius: 15%;
+}
+
+.house {
+  background-color: #363636;
+  width: 3vmin;
+  height: 3vmin;
+  transform: translate(4vmin, -12.3vmin);
+  border-radius: 15%;
 }
