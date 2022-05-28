@@ -1,8 +1,12 @@
 .background {
-  background-color: lightblue;
+  background-color: skyblue;
+                width: 100vw;
+                height: 100vh;
+                border: groove black;
 }
-
-.header {
-  background-color: teal;
-  
+.background {
+  background-color: navy;
+                width: 100vw;
+                height: 20vh;
+                border: groove black;
 }
