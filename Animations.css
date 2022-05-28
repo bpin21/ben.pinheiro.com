@@ -1,12 +1,19 @@
 .background {
-  background-color: skyblue;
+  background-image: linear-gradient(aqua, navy);
                 width: 100vw;
                 height: 100vh;
                 border: groove black;
 }
 .header {
-  background-color: navy;
+  background-image: linear-gradient(to bottom right, navy, green, blue, navy, green, navy, blue, green , navy);
                 width: 100vw;
-                height: 20vh;
+                height: 15vmin;
                 border: groove black;
+}
+.logo {
+  background-color: Gainsboro;
+  width: 12vmin;
+  height: 12vmin;
+  transform: translate(1.5vmin, 1.2vmin);
+  border-radius:20%
 }
