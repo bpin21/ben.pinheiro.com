@@ -4,7 +4,7 @@ description : contact me - pinheiro.ben.21@gmail.com
 ---
 
 # [Aesthetic Animations](/animations.html/)
-# [Interactive Ideas](/ideas.html/)
+# [Interactive Ideas](#)
 # [Scientific Simulations](/Simulations.md/)
 # [My Music](/music.html)
 # [Pictures of Paintings](/Paintings.md/)
