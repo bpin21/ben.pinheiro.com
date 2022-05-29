@@ -1,28 +1,86 @@
-body {
-  background-color: darkblue;
+.background {
+  background-image: linear-gradient(aqua, navy, rgb(48, 17, 99), rgb(161, 15, 15), orange);
+  width: 100vw;
+  height: 600vh;
+  border: groove black;
 }
 
-h1 {
-  color: white;
-  margin-left: 20px;
+.header {
+  background-image: linear-gradient(to bottom right, navy, green, blue, navy, green, navy, blue, green, navy);
+  height: 15vmin;
+  width: 100vw;
+  border: groove black;
+  transform: translateY(-2px);
+  z-index: 5;
 }
 
-a {
- font-size: 30px; 
- font-family: Arial, Helvetica, sans-serif;
+.logo {
+  background-color: Gainsboro;
+  width: 11vmin;
+  height: 11vmin;
+  transform: translate(1.5vmin, 1.2vmin);
+  border-radius: 22%;
+  cursor: pointer;
+  border: 1vmin solid #363636;
 }
 
-.outer-circle {
-  background-color: yellow;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  transform: skew(-30deg, 0deg);
+.triangle-up {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5vmin 5vmin 5vmin;
+  border-color: transparent transparent #363636 transparent;
+  border-radius: 25%;
+  transform: translate(0.5vmin, 1vmin);
 }
-.inner-circle {
-  background-color: orange;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  transform: skew(30deg, 0deg);
+
+.leg-r {
+  position: absolute;
+  background-color: #363636;
+  width: 2.5vmin;
+  height: 5vmin;
+  transform: translate(5.8vmin, 5.2vmin);
+  border-radius: 15%;
+}
+
+.leg-l {
+  position: absolute;
+  background-color: #363636;
+  width: 2.5vmin;
+  height: 5vmin;
+  transform: translate(2.7vmin, 5.2vmin);
+  border-radius: 15%;
+}
+
+.house {
+  position: absolute;
+  background-color: #363636;
+  width: 3vmin;
+  height: 3vmin;
+  transform: translate(3.5vmin, 5vmin);
+  border-radius: 15%;
+}
+
+.link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.design {
+  background-image: repeating-radial-gradient(circle at top, rgb(141, 28, 28) 0, blue, black 9%);
+  height: 100%;
+  width: 100%;
+  z-index:2;
+  border: groove black
+}
+
+.content {
+  top: 1%;
+  left: 8%;
+  position: relative;
 }
