@@ -10,7 +10,7 @@
   height: 15vmin;
   width: 100vw;
   border: groove black;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   z-index: 5;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .design {
-  background-image: repeating-radial-gradient(circle at top, rgb(141, 28, 28) 0, blue, black 9%);
+  background-image: repeating-radial-gradient(circle at center,black 0, blue,  rgb(141, 28, 28) 10%);
   height: 100%;
   width: 100%;
   z-index:2;
@@ -80,7 +80,7 @@
 }
 
 .content {
-  top: 1%;
+  top: 13vh;
   left: 8%;
   position: relative;
 }
