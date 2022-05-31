@@ -1,0 +1,34 @@
+.container {
+    width:90vw;
+    height:200vh;
+    background: blueviolet;
+    transform: translate(5vw, 13vh);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-column-gap: 3vw;
+    grid-row-gap: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.box {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(black, black, transparent 80%);
+    background-attachment: relative;
+    background-position: 0 10px;
+   
+}
+
+.box-content {
+    width: 100%;
+    padding-top:90%;
+    background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/1.png) no-repeat center;
+    background-size: contain;
+}
