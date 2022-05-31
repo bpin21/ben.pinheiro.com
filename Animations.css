@@ -73,47 +73,36 @@
 
 }
 
-.grid-h {
-  height: 100%;
-  width: 100%;
-  background-image: repeating-linear-gradient(0deg, #363636 0 15px, transparent 300px 20%);
-  background-size: 50vw;
-  margin: 0;
-  z-index: 0;
-  transform: translateY(-15vmin);
+.container {
+  width:90vw;
+  height:200vh;
+  transform: translate(5vw, 15vmin);
 }
 
-.content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  transform: translateY(15vmin);
-  z-index: 2;
-
-}
-
-.content > div {
-  flex-grow: 2;
-  width: 50%;
-  max-width: 50%;
-  z-index:3;
-}
-
-.content img {
-  width: 50%;
-  height: auto;
-  z-index:3;
-}
-
-
-.oldcontent {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: 2;
-  transform: translate(20px, -2950px);
+.grid {
   display: grid;
-  grid-template-columns: repeat(2, 300px);
-  grid-gap: 100px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  grid-column-gap: 3vw;
+  grid-row-gap: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.box {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(black, black, transparent 80%);
+  background-attachment: relative;
+  background-position: 0 10px;
+ 
+}
+
+.box-content {
+  width: 100%;
+  padding-top:90%;
+  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/1.png) no-repeat center;
+  background-size: contain;
 }
