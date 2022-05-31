@@ -1,9 +1,4 @@
-.background {
-  background-image: linear-gradient(aqua, navy, rgb(48, 17, 99), rgb(161, 15, 15), orange);
-  width: 100vw;
-  height: 600vh;
-  border: groove black;
-}
+
 
 .header {
   background-image: linear-gradient(to bottom right, navy, green, blue, navy, green, navy, blue, green, navy);
@@ -73,14 +68,20 @@
 
 .design {
   background-image: repeating-radial-gradient(circle at center,black 0, blue,  rgb(141, 28, 28) 10%);
-  height: 100%;
-  width: 100%;
+  height: 400vh;
+  width: 100vw;
   z-index:2;
   border: groove black
 }
 
 .content {
-  top: 13vh;
+  top: 20vh;
   left: 8%;
   position: relative;
+}
+
+#particle-js {
+  width: 100vw;
+  height: 400vh;
+  position: fixed;
 }

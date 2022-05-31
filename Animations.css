@@ -76,7 +76,8 @@
 .container {
   width:90vw;
   height:200vh;
-  transform: translate(5vw, 15vmin);
+  margin-top: 45px;
+  transform: translate(5vw, -290vh);
 }
 
 .grid {
@@ -105,4 +106,9 @@
   padding-top:90%;
   background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/1.png) no-repeat center;
   background-size: contain;
+}
+
+#particles-js {
+  
+  
 }
