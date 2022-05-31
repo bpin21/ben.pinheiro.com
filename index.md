@@ -3,7 +3,7 @@ title : Cool Stuff by Ben Pinheiro
 description : contact me - pinheiro.ben.21@gmail.com
 ---
 
-# [Aesthetic Animations](/animations.html/)
+# [Aesthetic Animations](/Animations.html/)
 # [Interactive Ideas](#)
 # [Scientific Simulations](/Simulations.md/)
 # [My Music](/music.html)
