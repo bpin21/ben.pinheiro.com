@@ -66,13 +66,6 @@
   z-index: 1;
 }
 
-.design {
-  background-image: repeating-radial-gradient(circle at center,black 0, blue,  rgb(141, 28, 28) 10%);
-  height: 400vh;
-  width: 100vw;
-  z-index:2;
-  border: groove black
-}
 
 .content {
   top: 20vh;

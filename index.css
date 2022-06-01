@@ -1,0 +1,279 @@
+body {
+
+    margin: 0;
+    padding: 0;
+}
+.header {
+    position: fixed;
+    height: 25%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(210deg, Gainsboro, darkslategray 70%);
+    opacity: 80%;
+}
+.link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 200;
+}
+
+h1 {
+    position: fixed;
+    top: 3%;
+    left: 36%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 44pt;
+    border-radius: 50%;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    max-width: 100vw;
+    background: radial-gradient(circle at top, gainsboro, darkslategray 98%);
+    opacity: 70%;
+}
+
+.separator {
+    position: relative;
+    min-height: 40vh;
+    min-width: 100vw;
+    background: linear-gradient(transparent, darkslategray 50%, transparent 75%);
+    opacity: 70%;
+    transform: translateY(13%);
+}
+
+.sep-part {
+    position: absolute;
+    min-height: 25vh;
+    min-width: 100vw;
+    background: radial-gradient(transparent, black 96%);
+    opacity: 70%;
+    transform: translateY(-512%);
+    
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    opacity: 60%;
+}
+
+.grid-x {
+    position: fixed;
+    width: 40%;
+    height: 1%;
+    background: radial-gradient(black 40%, transparent 60%);
+    top: 60%;
+    left: 50%;
+    opacity: 100%;
+    transform: translate(-50%);
+
+
+} 
+
+.grid-y {
+    position: fixed;
+    width: .7%;
+    height: 50%;
+    background: radial-gradient(black 40%, transparent 60%);
+    top: 50%;
+    left: 50%;
+    opacity: 100%;
+    transform: translateY(-30%);
+
+}
+
+.music {
+    position: fixed;
+    background-color: transparent;
+    width: 15%;
+    height: 20%;
+    top: 61%;
+    left: 35%;
+    z-index: 3;
+}
+
+.music:hover {
+    background: radial-gradient(circle at top right, white 20%, transparent 80%);
+}
+
+.note {
+    position: fixed;
+    top: 65%;
+    left: 43%;
+    width: 4%;
+    height: 2.5%;
+    border-radius:15%;
+    transform: skew(0deg, 25deg) rotate(-8deg);
+    background-color: black;
+    opacity: 100%;
+    z-index: 4;
+}
+
+.note-stem {
+    position: fixed;
+    top: 65.5%;
+    left: 43.24%;
+    width: .5%;
+    height: 6%;
+    transform: skewY(25deg) rotate(-8deg);
+    background-color: black;
+    opacity: 100%;
+    z-index: 2;
+}
+
+.note-base {
+    position: fixed;
+    top: 70%;
+    left: 41%;
+    width: 3%;
+    height: 5%;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 100%;
+    z-index: 2;
+}
+
+.animations {
+    position: fixed;
+    background-color: transparent;
+    width: 15%;
+    height: 20%;
+    top: 40%;
+    left: 35.1%;
+    z-index: 3;
+}
+.animations:hover {
+    background: radial-gradient(circle at bottom right, white 20%, transparent 80%);
+}
+
+.gg-shape-triangle {
+    position: fixed;
+    transform: scale(var(--ggs,1));
+    width: 5vw;
+    height: 5vw;
+    border-left: 12px solid transparent;
+    border-bottom: 12px solid;
+    
+}
+.gg-shape-triangle, .gg-shape-triangle::before {
+    display: block;
+    box-sizing: border-box;
+    border-right: 12px solid transparent;
+    transform: rotate(90deg);
+    bottom: 45%;
+    left: 42%;
+}
+.gg-shape-triangle::before {
+    content: "";
+    position: fixed;
+    width: 6vw;
+    height: 6vw;
+    border-left: 12px solid;
+    border-top: 12px solid;
+    border-bottom: 12px solid transparent;
+    transform: rotate(45deg) skew(10deg,10deg);
+    left: -25%;
+    top: 48%;
+    border-radius: 15%
+}
+
+.paintings {
+    position: fixed;
+    background-color: transparent;
+    width: 16%;
+    height: 20%;
+    top: 61%;
+    left: 50.6%;
+    z-index: 3;
+}
+.paintings:hover {
+    background: radial-gradient(circle at top left, white 20%, transparent 80%);
+}
+
+.handle {
+    position: relative;
+    display: block;
+    width: 12%;
+    height: 94%;
+    left: 20%;
+    top: 5%;
+    background-color: black;
+    border-radius: 50% 50% 50% 50% / 90% 90% 40% 40%;
+    transform: scale(50%, 60%) rotate(45deg);
+  }
+  .brush {
+    position: absolute;
+    width: 65%;
+    height: 45%;
+    left: -36%;
+    top: -20%;
+    border-radius: 50%;
+    box-shadow: 0 10px 0 0 black;
+    transform: skew(50deg, -20deg) rotate(30deg);
+    clip-path: polygon(100% 40%, 88% 100%, 100% 100%);
+    
+  }
+  .brush-base {
+    position: absolute;
+    width: 8%;
+    height: 12%;
+    left: 37%;
+    top: 21%;
+    border-radius: 50%;
+    background-color: black;
+    transform: skew(-20deg, -20deg) rotate(-40deg);
+    
+  }
+
+.games {
+    position: fixed;
+    background-color: transparent;
+    width: 16%;
+    height: 20%;
+    top: 40%;
+    left: 50.6%;
+    z-index: 3;
+}
+
+.games:hover {
+    background: radial-gradient(circle at bottom left, white 20%, transparent 80%);
+}
+
+.base {
+    position: relative;
+    width: 40%;
+    height: 17%;
+    background-color: black;
+    top: 48%;
+    left: 15%;
+    border-radius: 35% 35% 15% 15%;
+}
+
+.stick {
+    position: relative;
+    width: 6%;
+    height: 20%;
+    top: 10%;
+    left: 32%;
+    background-color: black;
+    z-index: 3;
+}
+
+.ball {
+    position: relative;
+    width: 16%;
+    height: 21%;
+    top: 26%;
+    left: 27%;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 3;
+}
