@@ -119,12 +119,12 @@
   background-size: contain;
 }
 .grid > .box:nth-of-type(2) > .box-content {
-  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/2.png) no-repeat center;
+  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/drawingYay.png) no-repeat center;
   width:100%;
   background-size: contain;
 }
 .grid > .box:nth-of-type(3) > .box-content {
-  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/3.png) no-repeat center;
+  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/project.png) no-repeat center;
   width:100%;
   background-size: contain;
 }
@@ -144,12 +144,12 @@
   background-size: contain;
 }
 .grid > .box:nth-of-type(7) > .box-content {
-  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/project.png) no-repeat center;
+  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/3.png) no-repeat center;
   width:100%;
   background-size: contain;
 }
 .grid > .box:nth-of-type(8) > .box-content {
-  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/drawingYay.png) no-repeat center;
+  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/2.png) no-repeat center;
   width:100%;
   background-size: contain;
 }
