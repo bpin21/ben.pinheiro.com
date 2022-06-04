@@ -97,6 +97,7 @@
   align-items: center;
   background: radial-gradient(black 30%, transparent 70%);
   background-attachment: relative;
+  background-clip: padding-box;
  
 }
 
@@ -105,6 +106,7 @@
 }
 
 .box-content {
+  position: relative;
   width: 100%;
   padding-top:90%;
   background-size: contain; 

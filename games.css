@@ -1,0 +1,189 @@
+.background {
+    background-image: linear-gradient(aqua, navy, rgb(48, 17, 99), rgb(161, 15, 15));
+    width: 100vw;
+    height: 300vh;
+    border: groove black;
+  }
+  
+  .header {
+    position: sticky;
+    background-image: linear-gradient(to bottom right, navy, green, blue, navy, green, navy, blue, green, navy);
+    height: 15vmin;
+    width: 100vw;
+    border: groove black;
+    transform: translateY(-2px);
+    z-index: 5;
+  }
+  
+  .logo {
+    background-color: Gainsboro;
+    width: 11vmin;
+    height: 11vmin;
+    transform: translate(1.5vmin, 1.2vmin);
+    border-radius: 22%;
+    cursor: pointer;
+    border: 1vmin solid #363636;
+  }
+  
+  .triangle-up {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5vmin 5vmin 5vmin;
+    border-color: transparent transparent #363636 transparent;
+    border-radius: 25%;
+    transform: translate(0.5vmin, 1vmin);
+  }
+  
+  .leg-r {
+    position: absolute;
+    background-color: #363636;
+    width: 2.5vmin;
+    height: 5vmin;
+    transform: translate(5.8vmin, 5.2vmin);
+    border-radius: 15%;
+  }
+  
+  .leg-l {
+    position: absolute;
+    background-color: #363636;
+    width: 2.5vmin;
+    height: 5vmin;
+    transform: translate(2.7vmin, 5.2vmin);
+    border-radius: 15%;
+  }
+  
+  .house {
+    position: absolute;
+    background-color: #363636;
+    width: 3vmin;
+    height: 3vmin;
+    transform: translate(3.5vmin, 5vmin);
+    border-radius: 15%;
+  }
+  
+  .link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  
+  }
+  
+  .container {
+    width:90vw;
+    height:200vh;
+    margin-top: 45px;
+    transform: translate(5vw, -290vh);
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-column-gap: 3vw;
+    grid-row-gap: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .box {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(black 30%, transparent 70%);
+    background-attachment: relative;
+    background-clip: padding-box;
+   
+  }
+  
+  .box:hover {
+    background: radial-gradient(white, transparent 70%);
+  }
+  
+  .box-content {
+    position: relative;
+    width: 100%;
+    padding-top:90%;
+    background-size: contain; 
+  }
+  .box-content:hover {
+    opacity: 80%;
+  }
+  
+  .grid > .box:nth-of-type(1) > .box-content {
+    background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/1.png) no-repeat center;
+    width:100%;
+    background-size: contain;
+  }
+  .grid > .box:nth-of-type(2) > .box-content {
+    background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/2.png) no-repeat center;
+    width:100%;
+    background-size: contain;
+  }
+  .grid > .box:nth-of-type(3) > .box-content {
+    background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/3.png) no-repeat center;
+    width:100%;
+    background-size: contain;
+  }
+
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 7;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 60px auto;
+    padding: 20px;
+    background: radial-gradient(circle at bottom, black, darkslategray);
+    border-radius: 20px;
+    width: 90%;
+    height: 80%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    z-index: 8;
+  }
+  
+  .popup .close {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    transition: all 100ms;
+    font-size: 60px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(211, 211, 211);
+  }
+  .popup .close:hover {
+    color: rgb(208, 10, 10);
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  .canvas {
+    padding: 20px;
+    position: relative;
+    top: 2em;
+    left: 2em;
+    z-index: 9;
+    width: 80%;
+    height: 90%;
+  }
