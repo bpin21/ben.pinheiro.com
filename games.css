@@ -116,7 +116,7 @@
   }
   
   .grid > .box:nth-of-type(1) > .box-content {
-    background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/1.png) no-repeat center;
+    background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/2048.png) no-repeat center;
     width:100%;
     background-size: contain;
   }
