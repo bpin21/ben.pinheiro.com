@@ -146,17 +146,65 @@
   background-size: contain;
 }
 .grid > .box:nth-of-type(7) > .box-content {
-  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/3.png) no-repeat center;
+  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/animationTest.png) no-repeat cent
+
   width:100%;
   background-size: contain;
 }
 .grid > .box:nth-of-type(8) > .box-content {
-  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/2.png) no-repeat center;
+  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/spiral.png) no-repeat center;
   width:100%;
   background-size: contain;
 }
 .grid > .box:nth-of-type(9) > .box-content {
-  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/net.png) no-repeat center;
+  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/project.png) no-repeat center;
   width:100%;
   background-size: contain;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 200ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 7;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 60px auto;
+  padding: 20px;
+  background: radial-gradient(circle at bottom, black, darkslategray);
+  border-radius: 20px;
+  width: 90%;
+  height: 80%;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  z-index: 8;
+}
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  transition: all 100ms;
+  font-size: 60px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(211, 211, 211);
+}
+.popup .close:hover {
+  color: rgb(208, 10, 10);
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
 }
