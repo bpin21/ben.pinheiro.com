@@ -15,6 +15,9 @@
         let numNodes = 1;
         let WIDTH = window.innerWidth;
         let HEIGHT = window.innerHeight;
+        let grd;
+        let white = 0;
+        let blue = 0;
         //let mouseX = event.clientX;
         //let mouseY = event.clientY;
 
@@ -22,6 +25,12 @@
         window.onload = function() {
             cnv = document.getElementById("canvas");
             ctx = cnv.getContext('2d');
+            ctx.canvas.width = WIDTH;
+            ctx.canvas.height = HEIGHT;
+            //grd = ctx.createLinearGradient(WIDTH/2,0,WIDTH/2,HEIGHT);
+            grd = ctx.createRadialGradient(WIDTH/2, HEIGHT/2, 0, WIDTH/2, HEIGHT/2, WIDTH/2);
+            grd.addColorStop(0,'rgba(0, 0, 150, .5)');
+            grd.addColorStop(1,'rgba(0, 0, 0, .5)');
             cx = cnv.width / 2;
             cy = cnv.height / 2;
             count = 0;
@@ -31,7 +40,7 @@
             var spawnY;
             for (i = 0; i < numNodes; i++){
                 spawnX = WIDTH / 2;
-                spawnY = HEIGHT * 2 / 3;
+                spawnY = HEIGHT * .62;
                 nodes.push(new Node(spawnX, spawnY, i));
             }
             
@@ -226,7 +235,28 @@
             count += 1;
 
             // background
-            ctx.fillStyle = 'rgba(0, 0, 250, .02)';
+            WIDTH = window.innerWidth;
+            HEIGHT = window.innerHeight;
+
+
+            grd = ctx.createRadialGradient(WIDTH/2, HEIGHT/2, 0, WIDTH/2, HEIGHT/2, WIDTH/2);
+            
+            
+            blue += 0.001; 
+            if (blue > 1) { 
+                blue = 1.0; 
+                white += 0.0002;
+                if (white > 1) { 
+                    white = 1.0; 
+                }
+                grd.addColorStop(white,'rgba(0, 0, 150, .5)');
+                grd.addColorStop(0,'rgba(255,255,255,0.5)');
+                grd.addColorStop(blue,'rgba(0, 0, 0, .5)');
+            } else {
+                grd.addColorStop(blue,'rgba(0, 0, 0, .5)');
+                grd.addColorStop(0,'rgba(0, 0, 150, .5)');
+            }
+            ctx.fillStyle = grd;
             ctx.fillRect(0, 0, WIDTH, HEIGHT);
             
 
@@ -235,6 +265,9 @@
             //mouseY = event.clientY;
 
             // update and render //
+
+
+
             new_parts = [];
             for (let part of particles) {
                 if (part.x >= 0 & part.x <= cnv.width & part.y >= 0 & part.y <= cnv.height & part.collision == false & part.size > 1 ) {

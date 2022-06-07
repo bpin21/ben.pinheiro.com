@@ -1,40 +1,40 @@
 
 
-    let cnv, ctx, cx, cy, count, entities;
-    const colors = ['#CE4721', '#B30A00', '#85002E', '#9C088C', '#AD55C9'];
-    let nodes, particles;
-    let spawnDelay = 50;
-    let decayPct = 60;
-    let sizeDecay = 0.15;
-    let numNodes = 4;
-    let WIDTH = window.innerWidth;
-    let HEIGHT = window.innerHeight;
+    let cnv2, ctx2, cx2, cy2, count2, entities2;
+    const colors2 = ['#CE4721', '#B30A00', '#85002E', '#9C088C', '#AD55C9'];
+    let nodes2, particles2;
+    let spawnDelay2 = 50;
+    let decayPct2 = 60;
+    let sizeDecay2 = 0.15;
+    let numnodes2 = 4;
+    let WIDTH2 = window.innerWidth;
+    let HEIGHT2= window.innerHeight;
     
     //let mouseX = event.clientX;
     //let mouseY = event.clientY;
-    
+
     // ON LOAD // 
     window.onload = function() {
-        console.log("!!!");
-        cnv = document.getElementById("canvas1");
-        cnv.width = WIDTH * 0.9;
-        cnv.height = HEIGHT * 0.8;
-        ctx = cnv.getContext('2d');
-        cx = cnv.width / 2;
-        cy = cnv.height / 2;
-        count = 0;
-        particles = [];
-        nodes = [];
+        cnv2 = document.getElementById("canvas2");
+        cnv2.width = WIDTH2 * 0.9;
+        cnv2.height = HEIGHT2* 0.8;
+        ctx2 = cnv2.getContext('2d');
+        cx2 = cnv2.width / 2;
+        cy2 = cnv2.height / 2;
+        count2 = 0;
+        particles2 = [];
+        nodes2 = [];
+
         // spawn walls
-        nodes.push(new Wall(cx / 2, cy / 2, 100, 100));
+        nodes2.push(new Wall(cx2 / 2, cy2 / 2, 100, 100));
         
         
 
-        // spawn initial particles
-        for (i = 0; i < numNodes; i++){
-            var spawnX = cnv.width / 2;
-            var spawnY = cnv.height / 2;
-            nodes.push(new Node(spawnX, spawnY, i, Math.PI / numNodes + Math.PI * i / 2));
+        // spawn initial particles2
+        for (i = 0; i < numnodes2; i++){
+            var spawnX = cnv2.width / 2;
+            var spawnY = cnv2.height / 2;
+            nodes2.push(new Node(spawnX, spawnY, i, Math.PI / numnodes2 + Math.PI * i / 2));
         }
         
         loop();
@@ -50,11 +50,11 @@
         this.color = 'rgb(255,0,0)';
         this.update = function() {}
         this.render = function() {
-            ctx.fillStyle = this.color;
-            ctx.beginPath();
-            ctx.rect(this.x, this.y, this.width, this.height);
-            ctx.closePath();
-            ctx.fill();
+            ctx2.fillStyle = this.color;
+            ctx2.beginPath();
+            ctx2.rect(this.x, this.y, this.width, this.height);
+            ctx2.closePath();
+            ctx2.fill();
         }
     }
 
@@ -74,7 +74,7 @@
         //this.delayId = id;
         this.freq = 15 * Math.PI;
         this.wobble = 10;
-        //if (id > numNodes) {this.delayId = id - numNodes;}
+        //if (id > numnodes2) {this.delayId = id - numnodes2;}
         this.update = function() {
             // update fields
             //if (this.size * 5 <= 255) {this.r = this.size * 5; this.g = 255 - this.r; console.log(this.g)}
@@ -83,22 +83,22 @@
             let oldY = this.y;
             this.x += this.speed * Math.cos(this.dir);
             this.y += this.speed * Math.sin(this.dir);
-            //this.wobble = 20 * Math.cos(count * Math.PI / this.freq);
-            this.dir -= this.size * 0.00002 * count;
-            // send out particles
-            //if (count % spawnDelay == 0){
-            this.size -= sizeDecay;
-            if (count % 3 == 0) {
-                particles.push(new NodeParticle(this.x, this.y, Math.PI - Math.atan2(oldX - this.x, oldY - this.y) + Math.PI, this.size));
+            //this.wobble = 20 * Math.cos(count2 * Math.PI / this.freq);
+            this.dir -= this.size * 0.00002 * count2;
+            // send out particles2
+            //if (count2 % spawnDelay2 == 0){
+            this.size -= sizeDecay2;
+            if (count2 % 3 == 0) {
+                particles2.push(new NodeParticle(this.x, this.y, Math.PI - Math.atan2(oldX - this.x, oldY - this.y) + Math.PI, this.size));
             }
             
         }
         this.render = function() {
-            ctx.fillStyle = this.color;
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-            ctx.closePath();
-            ctx.fill();
+            ctx2.fillStyle = this.color;
+            ctx2.beginPath();
+            ctx2.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+            ctx2.closePath();
+            ctx2.fill();
         }
     }
 
@@ -107,9 +107,9 @@
         this.y = y;
         this.dir = dir;
         this.size = size;
-        this.r = 200;
-        this.g = 250;
-        this.b = 20;
+        this.r = 20;
+        this.g = 20;
+        this.b = 200;
         this.a = 0.5;
         this.color = 'rgba('+ this.r + ',' + this.g + ',' + this.b + ',' +this.a+')';
         this.speed = 0.4 +  Math.random();
@@ -127,9 +127,9 @@
             newX = this.x + this.speed * Math.cos(this.dir);
             newY = this.y + this.speed * Math.sin(this.dir);
             // check collision
-            /*for (n in nodes){
+            /*for (n in nodes2){
                 if (n != this.id){
-                    node = nodes[n];
+                    node = nodes2[n];
                     distance = Math.sqrt( (node.x-newX)**2 + (node.y-newY)**2 );
                     
                     if (distance < 5) {
@@ -143,7 +143,7 @@
             
             this.x = newX;
             this.y = newY;
-            this.size -= this.size/5/decayPct;
+            this.size -= this.size/5/decayPct2;
 
             if (this.a < 0.01 || this.a > 0.99) {
                 this.asign = this.asign * -1;
@@ -160,67 +160,66 @@
         }
         // render
         this.render = function() {
-            ctx.fillStyle = this.color;
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-            ctx.closePath();
-            ctx.fill();
+            ctx2.fillStyle = this.color;
+            ctx2.beginPath();
+            ctx2.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+            ctx2.closePath();
+            ctx2.fill();
         }
 
 
     }
 
        
-    let new_parts;
+    let new_parts2;
     // MAIN LOOP // 
     function loop() {
-        console.log(window.location.href.toString().split('#')[1]);
-        if (window.location.href.toString().split('#')[1] == '1') {
+        if (window.location.href.toString().split('#')[1] == '2') {
         // time and frame
-        count += 1;
-        HEIGHT = window.innerHeight * 0.8;
-        WIDTH = window.innerWidth * 0.9;
-        cnv.height = HEIGHT;
-        cnv.width = WIDTH;
+        count2 += 1;
+        HEIGHT2= window.innerHeight * 0.8;
+        WIDTH2 = window.innerWidth * 0.9;
+        cnv2.height = HEIGHT;
+        cnv2.width = WIDTH;
         
-        if (count % spawnDelay == 0) {
-            for (i = 0; i < numNodes; i++){
-                var spawnX = cnv.width / 2;
-                var spawnY = cnv.height / 2;
-                nodes.push(new Node(spawnX, spawnY, i, Math.PI / numNodes + Math.PI * i / 2 + count / spawnDelay));
+        if (count2 % spawnDelay2 == 0) {
+            for (i = 0; i < numnodes2; i++){
+                var spawnX = cnv2.width / 2;
+                var spawnY = cnv2.height / 2;
+                nodes2.push(new Node(spawnX, spawnY, i, Math.PI / numnodes2 + Math.PI * i / 2 + count2 / spawnDelay2));
             }
         }
-        ctx = cnv.getContext('2d');
+        ctx2 = cnv2.getContext('2d');
         // background
-        ctx.fillStyle = 'rgba(0, 0, 0, .01)';
-        ctx.fillRect(0, 0, WIDTH, HEIGHT);
+        ctx2.fillStyle = 'rgba(0, 0, 0, .01)';
+        ctx2.fillRect(0, 0, WIDTH, HEIGHT);
 
         // mouse //
         //mouseX = event.clientX;
         //mouseY = event.clientY;
 
         // update and render //
-        new_parts = [];
-        for (let part of particles) {
-            if (part.x >= 0 & part.x <= cnv.width & part.y >= 0 & part.y <= cnv.height & part.size > 1 ) {
-                new_parts.push(part);
+        new_parts2 = [];
+        for (let part of particles2) {
+            if (part.x >= 0 & part.x <= cnv2.width & part.y >= 0 & part.y <= cnv2.height & part.size > 1 ) {
+                new_parts2.push(part);
                 part.update();
                 part.render();
             } 
         } 
-        particles = new_parts;
+        particles2 = new_parts2;
         
-        new_nodes = [];
-        for (let node of nodes) {
-            if (node.x >= 0 & node.x <= cnv.width & node.y >= 0 & node.y <= cnv.height & node.size > 1 ) {
-                new_nodes.push(node);
+        new_nodes2 = [];
+        for (let node of nodes2) {
+            if (node.x >= 0 & node.x <= cnv2.width & node.y >= 0 & node.y <= cnv2.height & node.size > 1 ) {
+                new_nodes2.push(node);
                 node.update();
                 node.render();
             }
             
-        }   //entities = new_ents;
+        }   //entities2 = new_ents;
         
     }
     requestAnimationFrame(loop);
-
+    
 }

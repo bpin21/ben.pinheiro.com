@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html style="width: 100%; height: 100%; margin:0;">
+<head></head>
+<body style="margin: 0; padding: 0;">
+<canvas id="canvas" width="1600" height="900"></canvas>
+<script type="text/javascript">
+    (function() {
+
+        let cnv, ctx, cx, cy, count, nodes, particles, new_parts;
+        const colors = ['#CE4721', '#B30A00', '#85002E', '#9C088C', '#AD55C9'];
+        let spawnDelay = 3;
+        let decayPct = 60;
+        let sizeDecay = 0.15;
+        let rotationFreq = 10;
+        let WIDTH = window.innerWidth;
+        let HEIGHT = window.innerHeight;
+        //let grd;
+        
+        // ON LOAD // 
+        window.onload = function() {
+            cnv = document.getElementById("canvas");
+            ctx = cnv.getContext('2d');
+            ctx.canvas.width = WIDTH;
+            ctx.canvas.height = HEIGHT;
+            //grd = ctx.createLinearGradient(WIDTH/2,0,WIDTH/2,HEIGHT);
+            //grd.addColorStop(0,'rgba(0, 0, 150, .5)');
+            //grd.addColorStop(1,'rgba(0, 0, 0, .5)');
+            cx = cnv.width / 2;
+            cy = cnv.height / 2;
+            count = 0;
+            particles = [];
+            nodes = [];
+            nodes.push(new Spawner(cx, cy));
+            
+            loop();
+        }
+
+        // FUNCTIONS //
+        
+        // CLASSES //
+        function Spawner() {
+            this.x = cx;
+            this.y = cy;
+            
+            this.update = function() {
+                this.x = cx;
+                this.y = cy;
+                if (count % spawnDelay == 0) {
+                    particles.push(new LaserBar(2, 'rgba(0,255,0,.2)', 1300, 400, Math.PI/2));
+                    particles.push(new LaserBar(5, 'rgba(0,0,255,.2)', 1400, 150, Math.PI));
+                    particles.push(new LaserBar(3, 'rgba(255,255,0,.2)', 900, 250, Math.PI*3/2));
+                    particles.push(new LaserBar(4, 'rgba(255,0,0,.2)', 1000, 100, 0));
+                }
+            }
+            this.render = function() {}
+        }
+        function LaserBar(speed, color, size, shrink, phase) {
+            this.x = cx;
+            this.y = cy;
+            this.dir = count / (phase +rotationFreq)+ phase;
+            //this.phase = phase;
+            this.speed = speed;
+            this.color = color;
+            this.size = size;
+            this.shrink = shrink;
+            this.update = function() {
+                this.x += this.speed * Math.cos(this.dir);
+                this.y += this.speed * Math.sin(this.dir);
+                this.size -= this.size / this.shrink;
+                this.dir += 0.01;
+
+            }
+            this.render = function() {
+                ctx.fillStyle = this.color;   
+                ctx.beginPath();
+                ctx.rotate(this.dir + Math.PI / 2 + this.phase);
+                ctx.rect(this.x, this.y, this.size/5, this.size/5);
+                ctx.closePath();
+                ctx.fill();
+                ctx.rotate(-1 * (this.dir + Math.PI / 2 + this.phase));
+            }
+        }
+        // MAIN LOOP // 
+        function loop() {
+            // time and frame
+            count += 1;
+
+            // background
+            ctx.canvas.width = WIDTH;
+            ctx.canvas.height = HEIGHT;
+            WIDTH = window.innerWidth;
+            HEIGHT = window.innerHeight;
+
+            cx = cnv.width / 2;
+            cy = cnv.height / 2;
+
+            
+            ctx.fillStyle = 'rgba(0,0,0,.8)';
+            ctx.fillRect(0, 0, WIDTH, HEIGHT);
+            
+
+            // mouse //
+            //mouseX = event.clientX;
+            //mouseY = event.clientY;
+
+            // update and render //
+
+
+            new_parts = [];
+            for (let part of particles) {
+                if (part.x + part.size >= 0 & part.x - part.size <= cnv.width & part.y + part.size >= 0 & part.y - part.size <= cnv.height & part.size > 1 ) {
+                    new_parts.push(part);
+                    part.update();
+                    part.render();
+                } 
+            } 
+            paticles = new_parts;
+            
+            for (let node of nodes) {
+                node.update();
+                node.render();
+                
+            }   //entities = new_ents;
+            
+
+            requestAnimationFrame(loop);
+        }
+    })();
+</script>
+</body>
+</html>

@@ -7,7 +7,7 @@
 
 .header {
   position: sticky;
-  background-image: linear-gradient(to bottom right, navy, green, blue, navy, green, navy, blue, green, navy);
+  background-image: linear-gradient(rgba(149, 171, 255, 0.8),  rgba(0,0,128,1));
   height: 15vmin;
   width: 100vw;
   border: groove black;
@@ -116,52 +116,22 @@
 }
 
 .grid > .box:nth-of-type(1) > .box-content {
-  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/1.png) no-repeat center;
+  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/animationTest.png) no-repeat center;
   width:100%;
   background-size: contain;
 }
 .grid > .box:nth-of-type(2) > .box-content {
-  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/drawingYay.png) no-repeat center;
+
+  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/triangleWob.png) no-repeat center;
   width:100%;
   background-size: contain;
 }
 .grid > .box:nth-of-type(3) > .box-content {
-  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/project.png) no-repeat center;
-  width:100%;
-  background-size: contain;
-}
-.grid > .box:nth-of-type(4) > .box-content {
-  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/4.png) no-repeat center;
-  width:100%;
-  background-size: contain;
-}
-.grid > .box:nth-of-type(5) > .box-content {
-  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/spiral.png) no-repeat center;
-  width:100%;
-  background-size: contain;
-}
-.grid > .box:nth-of-type(6) > .box-content {
-  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/fields.png) no-repeat center;
-  width:100%;
-  background-size: contain;
-}
-.grid > .box:nth-of-type(7) > .box-content {
-  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/animationTest.png) no-repeat cent
 
+  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/laserBars.png) no-repeat center;
   width:100%;
   background-size: contain;
 }
-.grid > .box:nth-of-type(8) > .box-content {
-  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/spiral.png) no-repeat center;
-  width:100%;
-  background-size: contain;
-}
-.grid > .box:nth-of-type(9) > .box-content {
-  background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/project.png) no-repeat center;
-  width:100%;
-  background-size: contain;
-}
-
 .overlay {
   position: fixed;
   top: 0;
