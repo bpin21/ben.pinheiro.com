@@ -120,6 +120,11 @@
     width:100%;
     background-size: contain;
   }
+  .grid > .box:nth-of-type(2) > .box-content {
+    background: url(https://raw.githubusercontent.com/bpin21/bpin21.github.io/gh-pages/docs/assets/roids.png) no-repeat center;
+    width:100%;
+    background-size: contain;
+  }
 
   
   .overlay {
